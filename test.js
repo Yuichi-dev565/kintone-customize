@@ -31,10 +31,11 @@
 //    });
 
     // レコード詳細画面が表示された時のイベント
-    kintone.events.on('app.record.detail.show', (event) => {
-        // 第一引数に 'SUCCESS', 'INFO', 'ERROR', 'WARNING' を指定できます
-        kintone.showNotification('INFO', 'レコード詳細画面を表示しました。内容を確認してください。');
+      kintone.events.on('app.record.detail.show', function(event) {
+        // 警告ダイアログを表示します
+        alert('これはレコード詳細画面の警告メッセージです！');
         return event;
+      });
 
 })();
 

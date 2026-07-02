@@ -33,7 +33,7 @@
     // レコード詳細画面が表示された時のイベント
       kintone.events.on('app.record.detail.show', function(event) {
         // 警告ダイアログを表示します
-        alert('これはレコード詳細画面の警告メッセージです！');
+        alert('これはレコード詳細画面の警告メッセージです!!!!!');
         return event;
       });
 

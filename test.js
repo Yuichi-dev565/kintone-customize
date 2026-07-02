@@ -31,14 +31,9 @@
 //    });
 
     // レコード詳細画面が表示された時のイベント
-    kintone.events.on('app.record.detail.show', function(event) {
-        
-        // 画面に表示したいメッセージ
-        var infoMessage = '【お知らせ】\n本レコードの確認事項です。\n期日までに対応を行ってください。';
-
-        // アラートでメッセージを表示
-        alert(infoMessage);
-
+    kintone.events.on('app.record.detail.show', (event) => {
+        // 第一引数に 'SUCCESS', 'INFO', 'ERROR', 'WARNING' を指定できます
+        kintone.showNotification('INFO', 'レコード詳細画面を表示しました。内容を確認してください。');
         return event;
 
 })();
